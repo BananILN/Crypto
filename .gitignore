@@ -3,3 +3,7 @@ node_modules/
 
 # Игнорировать файлы пакета npm
 package-lock.json
+
+# Игнорировать все файлы, связанные с npm
+*.log
+*.tgz
