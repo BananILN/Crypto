@@ -16,7 +16,7 @@ const validateMessages ={
 export default function AddAssetForm({ onClose }){
     const [submited, setSubmit] = useState(false)
     const [form] = Form.useForm()
-    const {crypto} = useCrypto()
+    const {crypto, addAsset} = useCrypto()
     const [coin, setCoin] = useState(null)
     const assetRef =  useRef()
 
@@ -67,6 +67,7 @@ export default function AddAssetForm({ onClose }){
 
         assetRef.current = newAsset
         setSubmit(true)
+        addAsset(newAsset);
    }
 
    function handleAmountChange(value){
